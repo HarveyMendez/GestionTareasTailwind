@@ -46,7 +46,8 @@ namespace Proyecto_1_C14644_C17853.Controllers
             // Busca al usuario en la base de datos.
             Usuario user = await _usuarioRepository.ObtenerUsuario(
                 loginUsuario.Email,
-                Utility.Utility.EncriptarDato(loginUsuario.Password)
+                //Utility.Utility.EncriptarDato(loginUsuario.Password)
+                loginUsuario.Password
             );
 
             if (user is null)
